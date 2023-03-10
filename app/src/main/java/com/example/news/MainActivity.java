@@ -1,5 +1,6 @@
 package com.example.news;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -7,6 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -111,6 +114,33 @@ public class MainActivity extends AppCompatActivity implements SelectListner, Vi
         RequestManager manager=new RequestManager(this);
         manager.getNewsHeadlines(listner,category,null);
 
+    }
 
+    @Override
+    public void onBackPressed() {
+
+        AlertDialog.Builder alertdialog = new AlertDialog.Builder(MainActivity.this);
+        alertdialog.setTitle("Exit App !!");
+        alertdialog.setMessage("Do You Want To Exit App?");
+        alertdialog.setCancelable(false);
+
+        alertdialog.setPositiveButton(
+                "Yes",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        finish();
+                    }
+                });
+
+        alertdialog.setNegativeButton(
+                "No",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+
+        AlertDialog alert11 = alertdialog.create();
+        alert11.show();
     }
 }
