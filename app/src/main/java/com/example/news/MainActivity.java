@@ -117,36 +117,4 @@ public class MainActivity extends AppCompatActivity implements SelectListner, Vi
         manager.getNewsHeadlines(listner,category,null);
 
     }
-
-    @Override
-    public void onBackPressed() {
-
-
-
-        AlertDialog.Builder alertdialog = new AlertDialog.Builder(MainActivity.this);
-        alertdialog.setTitle("Exit App !!");
-        alertdialog.setMessage("Do You Want To Exit App?");
-        alertdialog.setCancelable(false);
-        alertdialog.setIcon(R.drawable.main_img);
-
-        alertdialog.setPositiveButton(
-                "Yes",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        finish();
-
-                    }
-                });
-
-        alertdialog.setNegativeButton(
-                "No",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
-                });
-
-        AlertDialog alert11 = alertdialog.create();
-        alert11.show();
-    }
 }
