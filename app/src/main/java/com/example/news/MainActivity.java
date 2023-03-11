@@ -14,6 +14,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.news.models.NewsApiResponce;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements SelectListner, Vi
     ProgressDialog progressDialog;
     Button b1,b2,b3,b4,b5,b6,b7;
     SearchView news_Search_View;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,16 +121,20 @@ public class MainActivity extends AppCompatActivity implements SelectListner, Vi
     @Override
     public void onBackPressed() {
 
+
+
         AlertDialog.Builder alertdialog = new AlertDialog.Builder(MainActivity.this);
         alertdialog.setTitle("Exit App !!");
         alertdialog.setMessage("Do You Want To Exit App?");
         alertdialog.setCancelable(false);
+        alertdialog.setIcon(R.drawable.main_img);
 
         alertdialog.setPositiveButton(
                 "Yes",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         finish();
+
                     }
                 });
 
