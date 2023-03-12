@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_marginTop="100dp"
+    android:weightSum="3"
     tools:context=".Dashboard">
 
     <LinearLayout
@@ -12,7 +14,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:layout_weight="1">
         <com.google.android.material.card.MaterialCardView
             android:layout_width="130dp"
             android:layout_height="150dp"
@@ -106,7 +109,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:layout_weight="1">
         <com.google.android.material.card.MaterialCardView
             android:layout_width="130dp"
             android:layout_height="150dp"
@@ -179,7 +183,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
-                    android:text="Category Articles"
+                    android:text="Category"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:maxLines="1"
@@ -200,7 +204,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:layout_weight="1">
         <com.google.android.material.card.MaterialCardView
             android:layout_width="130dp"
             android:layout_height="150dp"
